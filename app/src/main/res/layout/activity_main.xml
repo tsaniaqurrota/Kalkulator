@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="20dp"
+    android:background="@color/black"
+    android:gravity="bottom">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Calculator"
+        android:textSize="20sp"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_title"
+        android:layout_marginEnd="5dp"
+        android:background="@color/black"
+        android:padding="10dp"
+        android:gravity="end"
+        android:text=""
+        android:textColor="#fff"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input"
+        android:padding="10dp"
+        android:gravity="end"
+        android:textSize="50sp"
+        android:background="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="50dp"
+        android:textColor="#9A9292"
+        android:text=""
+        />
+
+
+    <Button
+        android:id="@+id/buttonAC"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_below="@id/result"
+        android:layout_marginHorizontal="3dp"
+        android:backgroundTint="@color/grey"
+        android:text="AC"
+        android:textColor="@color/orange"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/buttonDel"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_alignTop="@id/buttonAC"
+        android:layout_alignBottom="@id/buttonAC"
+        android:layout_marginHorizontal="3dp"
+        android:layout_toRightOf="@id/buttonAC"
+        android:backgroundTint="@color/grey"
+        android:textColor="@color/orange"
+        android:textSize="25sp"
+        android:text="⌫"
+        android:onClick="inputOperator"/>
+
+    <Button
+        android:id="@+id/buttonPersen"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_alignTop="@id/buttonDel"
+        android:layout_alignBottom="@id/buttonDel"
+        android:layout_marginHorizontal="3dp"
+        android:layout_toRightOf="@id/buttonDel"
+        android:backgroundTint="@color/grey"
+        android:textColor="@color/orange"
+        android:textSize="25sp"
+        android:text="%"
+        android:onClick="inputOperator"/>
+
+    <Button
+        android:id="@+id/buttonDivided"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_alignTop="@id/buttonPersen"
+        android:layout_alignBottom="@id/buttonPersen"
+        android:layout_marginHorizontal="3dp"
+        android:layout_toRightOf="@id/buttonPersen"
+         android:backgroundTint="@color/grey"
+        android:textColor="@color/orange"
+        android:textSize="25sp"
+        android:text="÷"
+        android:onClick="inputOperator"/>
+
+    <!-- baris 2 -->
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_below="@id/buttonAC"
+            android:layout_marginHorizontal="3dp"
+             android:backgroundTint="@color/grey"
+            android:text="7"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:onClick="inputOperand"/>
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_alignTop="@id/button7"
+        android:layout_alignBottom="@id/button7"
+        android:layout_marginHorizontal="3dp"
+        android:layout_toRightOf="@id/button7"
+         android:backgroundTint="@color/grey"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:text="8"
+        android:onClick="inputOperand"/>
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_alignTop="@id/button8"
+        android:layout_alignBottom="@id/button8"
+        android:layout_marginHorizontal="3dp"
+        android:layout_toRightOf="@id/button8"
+         android:backgroundTint="@color/grey"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:text="9"
+        android:onClick="inputOperand"/>
+
+    <Button
+        android:id="@+id/buttonMultiple"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_alignTop="@id/button9"
+        android:layout_alignBottom="@id/button9"
+        android:layout_marginHorizontal="3dp"
+        android:layout_toRightOf="@id/button9"
+         android:backgroundTint="@color/grey"
+        android:textColor="@color/orange"
+        android:textSize="25sp"
+        android:text="×"
+        android:onClick="inputOperator"/>
+
+    <!-- baris 3 -->
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_below="@id/button7"
+        android:layout_marginHorizontal="3dp"
+         android:backgroundTint="@color/grey"
+        android:onClick="inputOperand"
+        android:text="4"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_alignTop="@id/button4"
+        android:layout_alignBottom="@id/button4"
+        android:layout_marginHorizontal="3dp"
+        android:layout_toRightOf="@id/button4"
+         android:backgroundTint="@color/grey"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:text="5"
+        android:onClick="inputOperand"/>
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_alignTop="@id/button5"
+        android:layout_alignBottom="@id/button5"
+        android:layout_marginHorizontal="3dp"
+        android:layout_toRightOf="@id/button5"
+         android:backgroundTint="@color/grey"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:text="6"
+        android:onClick="inputOperand"/>
+
+    <Button
+        android:id="@+id/buttonMin"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_alignTop="@id/button6"
+        android:layout_alignBottom="@id/button6"
+        android:layout_marginHorizontal="3dp"
+        android:layout_toRightOf="@id/button6"
+         android:backgroundTint="@color/grey"
+        android:textColor="@color/orange"
+        android:textSize="25sp"
+        android:text="-"
+        android:onClick="inputOperator"/>
+
+    <!-- baris 4 -->
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_below="@id/button4"
+            android:layout_marginHorizontal="3dp"
+             android:backgroundTint="@color/grey"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:onClick="inputOperand"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/button1"
+        android:layout_alignBottom="@id/button1"
+        android:layout_marginHorizontal="3dp"
+        android:layout_toRightOf="@id/button1"
+        android:backgroundTint="@color/grey"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:text="2"
+        android:onClick="inputOperand"/>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_alignTop="@id/button2"
+        android:layout_alignBottom="@id/button2"
+        android:layout_marginHorizontal="3dp"
+        android:layout_toRightOf="@id/button2"
+         android:backgroundTint="@color/grey"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:text="3"
+        android:onClick="inputOperand"/>
+
+    <Button
+        android:id="@+id/buttonPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_alignTop="@id/button3"
+        android:layout_alignBottom="@id/button3"
+        android:layout_marginHorizontal="3dp"
+        android:layout_toRightOf="@id/button3"
+         android:backgroundTint="@color/grey"
+        android:textColor="@color/orange"
+        android:textSize="25sp"
+        android:text="+"
+        android:onClick="inputOperator"/>
+
+    <!-- baris 5 -->
+
+    <Button
+        android:id="@+id/buttonPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_below="@id/button1"
+        android:layout_marginHorizontal="3dp"
+        android:backgroundTint="@color/grey"
+        android:text="."
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:onClick="inputOperand"/>
+
+    <Button
+        android:id="@+id/button0"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_alignTop="@id/buttonPoint"
+        android:layout_alignBottom="@id/buttonPoint"
+        android:layout_marginHorizontal="3dp"
+        android:layout_toRightOf="@id/buttonPoint"
+         android:backgroundTint="@color/grey"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:text="0"
+        android:onClick="inputOperand"/>
+
+    <Button
+        android:id="@+id/buttonResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/button0"
+        android:layout_alignBottom="@id/button0"
+        android:layout_marginHorizontal="3dp"
+        android:layout_toRightOf="@id/button0"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:backgroundTint="@color/orange"
+        android:text="="
+        android:onClick="inputOperator"/>
+
+
+</RelativeLayout>
